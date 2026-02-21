@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="kl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" >
+   
+    
+</head>
+<body>
+    <div class="container">      
+        <div class="div1">
+
+       <div class="img-container">
+         <img src="klh.png" alt="">
+         
+       </div>
+       
+    </div>
+    <div class="div2">
+        <div class="klh-div">
+    <div class="logos">
+        <img src="ims.png" alt="">
+        <img src="ims.png" alt="">
+    </div>
+    <i class="fa-solid fa-gear"></i>
+</div>
+
+        <div class="login-div">
+          
+           <p id="login-text"> <strong>Login</strong></p>
+           <label for="text">Enter Username</label>
+           <input type="text" id="user" placeholder="username" required><br>
+           <label for="password">Enter Password</label>
+          
+           <input type="password" id="password" placeholder="enter password" required>
+           <p id="incorret" style="color: red; display: none; font-size: 12px;">incorrect username or password.</p>
+             
+          <div class="rem"> <input type="checkbox" id="check">   
+           <label for="check" style="">Remember me </label></div>
+          
+           <br> 
+            <img src="error.png" alt="">
+              <input type="text" id="error" placeholder="Enter verification code" required>
+           <div class="reset-div">
+            <p>Forgot password?</p>
+            <p>Parent Registration?</p>
+            <p>MFA Registration?</p>
+            
+           </div>
+           <center>
+            <button onclick="login()" id="btn">
+                Login
+            </button>
+           </center> 
+        </div>
+    </div>
+    </div>
+    <script>
+        const usernameEle = document.getElementById("user");
+        const passEle = document.getElementById("password");
+        const buttEle = document.getElementById("btn");
+
+        function login(){
+            if(usernameEle.value === "2510030020" && passEle.value === "2510030020"){
+               
+                usernameEle.style.borderRadius = "10px";
+                usernameEle.style.borderColor = "green";
+                passEle.style.borderColor = "green";
+                window.location.href = "main.html"; 
+                incorrectMessage.display = "none";
+
+            }
+            else{
+                usernameEle.style.borderColor = "red";
+                passEle.style.borderColor = "red";
+                const incorrectMessage = document.getElementById("incorret");
+                incorrectMessage.style.display = "block";
+
+            }
+        }
+    </script>
+</body>
+</html>
